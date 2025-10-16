@@ -1,0 +1,10 @@
+geopandas==1.1.1
+libpysal==4.13.0
+matplotlib==3.10.7
+numpy==2.2.6
+openpyxl==3.1.5
+pandas==2.3.0
+spreg==1.8.3
+statsmodels==0.14.5
+streamlit==1.45.1
+streamlit-folium==0.25.3
