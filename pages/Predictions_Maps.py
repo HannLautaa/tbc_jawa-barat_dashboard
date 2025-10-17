@@ -62,6 +62,8 @@ with col2:
     with st.container(border=True):
         d = merged.copy()
         d = d[['NAME_2', 'Y', 'Y_prediksi', 'Residual']]
+        if provinsi:
+            d = d[d['NAME_2'].isin(provinsi)]
         d.rename(columns={'NAME_2': 'Kabupaten/Kota'}, inplace=True)
         d.set_index('Kabupaten/Kota', inplace=True)
         d = d.sort_index()
