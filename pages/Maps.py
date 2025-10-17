@@ -37,7 +37,9 @@ with cola:
                     cmap='YlOrRd',
                     legend=True,
                     column='Y',
-                    edgecolor='black'
+                    edgecolor='black',
+                    vmin=0,
+                    vmax=30000
                 )
         else:
                 merged.plot(
@@ -45,7 +47,9 @@ with cola:
                     cmap='YlOrRd',
                     legend=True,
                     column='Y',
-                    edgecolor='black'
+                    edgecolor='black',
+                    vmin=0,
+                    vmax=30000
                 )
         ax.set_title('Peta Kasus TBC di Jawa Barat', fontsize=14)
         ax.axis('off')
