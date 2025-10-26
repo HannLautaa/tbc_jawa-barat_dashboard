@@ -29,19 +29,23 @@ for col in cols:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 fig = px.histogram(df, x='Y', nbins=20)
 
-with st.container(border=True):
-    a, b = st.columns([1, 1])
-    with a:
-        with st.container(border=True):
-            st.subheader('Bar Chart')
-            st.bar_chart(df['Y'])
-    with b:
-        with st.container(border=True):
-            st.subheader('Histogram')
-            fig.update_layout(height=360)
-            st.plotly_chart(fig, height=500)
-    c1, c2 = st.columns([1, 1])
-    c1.subheader('DataFrame')
-    c1.dataframe(df)
-    c2.subheader('Statistik Deskriptif')
-    c2.write(df.describe())
+# with st.container(border=True):
+a, b = st.columns([1, 1])
+c1, c2 = st.columns([1, 1])
+with a:
+    with st.container(border=True):
+        st.subheader('Bar Chart')
+        st.bar_chart(df['Y'])
+with b:
+    with st.container(border=True):
+        st.subheader('Histogram Jumlah Kasus')
+        fig.update_layout(height=360)
+        st.plotly_chart(fig, height=500)
+with c1:
+    with st.container(border=True):
+        st.subheader('DataFrame')
+        st.dataframe(df)
+with c2:
+    with st.container(border=True):
+        st.subheader('Statistik Deskriptif')
+        st.write(df.describe())
