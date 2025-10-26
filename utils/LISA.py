@@ -49,8 +49,6 @@ def lisa_map_cluster():
     from esda import Moran_Local
     import numpy as np
 
-    st.set_page_config(layout="wide")
-
     gdf = gpd.read_file("data/gadm41_IDN_2.json")
     gdf = gdf[gdf['NAME_1'] == 'JawaBarat']
 
